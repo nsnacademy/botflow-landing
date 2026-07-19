@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf7f2" />
     <meta name="description" content="Создаем Telegram-ботов для автоматизации заявок, записи клиентов и работы с бизнесом." />
     <title>BotFlow — Telegram-боты для бизнеса</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,20 +13,30 @@
   </head>
   <body>
     <div class="page-bg"></div>
+    <div class="bg-orb orb-left"></div>
+    <div class="bg-orb orb-right"></div>
+
     <header class="site-header">
       <div class="container nav-bar">
         <a class="logo" href="#hero" aria-label="BotFlow home">
           <span class="logo-mark">B</span>
           <span class="logo-text">BotFlow</span>
         </a>
-        <nav class="site-nav" aria-label="Главная навигация">
+
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Главная навигация">
           <a href="#features">Возможности</a>
           <a href="#workflow">Как работаем</a>
           <a href="#industries">Для кого</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Контакты</a>
         </nav>
-        <a class="btn btn-primary btn-small" href="#contact">Бесплатный разбор</a>
+        <a class="btn btn-primary btn-small desktop-cta" href="#contact">Бесплатный разбор</a>
       </div>
     </header>
 
@@ -33,38 +44,45 @@
       <section class="hero section" id="hero">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Telegram automation for modern business</p>
+            <div class="hero-badge">Telegram automation • для современного бизнеса</div>
             <h1>Автоматизируйте бизнес через Telegram</h1>
             <p class="hero-text">
-              Создаем Telegram-ботов, которые помогают быстрее обрабатывать заявки, экономить время сотрудников и автоматизировать работу с клиентами.
+              Создаем Telegram-ботов, которые помогают быстрее обрабатывать заявки,
+              экономить время сотрудников и превращать рутину в надежную систему.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Получить бесплатный разбор</a>
               <a class="btn btn-secondary" href="#features">Посмотреть возможности</a>
             </div>
-            <ul class="hero-badges" aria-label="Преимущества">
-              <li>✓ Бесплатный разбор</li>
-              <li>✓ Без обязательств</li>
-              <li>✓ Ответим в течение дня</li>
-            </ul>
+            <div class="hero-metrics">
+              <div class="metric-pill">⚡ 3–14 дней</div>
+              <div class="metric-pill">✓ Без обязательств</div>
+              <div class="metric-pill">✓ Ответим в течение дня</div>
+            </div>
           </div>
 
           <div class="hero-visual reveal" aria-hidden="true">
-            <div class="phone-frame">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <div class="screen-top">
-                  <span>Telegram</span>
-                  <span class="screen-pill">online</span>
+            <div class="hero-shell">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="screen-top">
+                    <span>Telegram</span>
+                    <span class="screen-pill">online</span>
+                  </div>
+                  <div class="message-stack">
+                    <div class="message-bubble bubble-bot is-visible">Здравствуйте 👋</div>
+                    <div class="message-bubble bubble-bot">Выберите действие</div>
+                    <div class="message-bubble bubble-bot">Оставить заявку</div>
+                    <div class="message-bubble bubble-bot">Записаться</div>
+                    <div class="message-bubble bubble-bot">Получить консультацию</div>
+                    <div class="message-bubble bubble-bot">Спасибо!</div>
+                  </div>
                 </div>
-                <div class="message-stack">
-                  <div class="message-bubble bubble-bot is-visible">Здравствуйте 👋</div>
-                  <div class="message-bubble bubble-bot">Выберите действие</div>
-                  <div class="message-bubble bubble-bot">Оставить заявку</div>
-                  <div class="message-bubble bubble-bot">Записаться</div>
-                  <div class="message-bubble bubble-bot">Получить консультацию</div>
-                  <div class="message-bubble bubble-bot">Спасибо!</div>
-                </div>
+              </div>
+              <div class="floating-card">
+                <p>Бот уже отвечает клиентам 24/7</p>
+                <strong>без потери заявок</strong>
               </div>
             </div>
           </div>
@@ -79,12 +97,36 @@
             <p>Рутинные процессы съедают время, а заявки и обращения часто уходят без внимания.</p>
           </div>
           <div class="card-grid">
-            <article class="info-card glass reveal"><h3>Не успеваете отвечать клиентам</h3><p>Ответы задерживаются, а потенциальные клиенты уходят.</p></article>
-            <article class="info-card glass reveal"><h3>Одни и те же вопросы каждый день</h3><p>Сотрудники тратят время на типовые запросы.</p></article>
-            <article class="info-card glass reveal"><h3>Запись ведется вручную</h3><p>Сбиваются слоты, появляется путаница и ошибки.</p></article>
-            <article class="info-card glass reveal"><h3>Теряются заявки</h3><p>Заявки остаются в переписке или заметках.</p></article>
-            <article class="info-card glass reveal"><h3>Клиенты уходят к конкурентам</h3><p>Скорость ответа напрямую влияет на конверсию.</p></article>
-            <article class="info-card glass reveal"><h3>Сотрудники тратят время на рутину</h3><p>Команда выполняет повторяющиеся действия вместо роста.</p></article>
+            <article class="info-card glass reveal">
+              <div class="card-index">01</div>
+              <h3>Не успеваете отвечать клиентам</h3>
+              <p>Ответы задерживаются, а потенциальные клиенты уходят.</p>
+            </article>
+            <article class="info-card glass reveal">
+              <div class="card-index">02</div>
+              <h3>Одни и те же вопросы каждый день</h3>
+              <p>Сотрудники тратят время на типовые запросы и уточнения.</p>
+            </article>
+            <article class="info-card glass reveal">
+              <div class="card-index">03</div>
+              <h3>Запись ведется вручную</h3>
+              <p>Сбиваются слоты, появляется путаница и ошибки.</p>
+            </article>
+            <article class="info-card glass reveal">
+              <div class="card-index">04</div>
+              <h3>Теряются заявки</h3>
+              <p>Заявки остаются в переписке, заметках или в голове у сотрудника.</p>
+            </article>
+            <article class="info-card glass reveal">
+              <div class="card-index">05</div>
+              <h3>Клиенты уходят к конкурентам</h3>
+              <p>Скорость ответа напрямую влияет на конверсию и доверие.</p>
+            </article>
+            <article class="info-card glass reveal">
+              <div class="card-index">06</div>
+              <h3>Сотрудники тратят время на рутину</h3>
+              <p>Команда выполняет повторяющиеся действия вместо роста.</p>
+            </article>
           </div>
           <div class="section-cta reveal"><p>Все это можно автоматизировать.</p></div>
         </div>
@@ -97,12 +139,61 @@
             <h2>Готовые сценарии для роста бизнеса</h2>
           </div>
           <div class="feature-grid">
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Принимать заявки</h3><p>Бот собирает обращения в удобном формате и сразу передает их в работу.</p></article>
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Записывать клиентов</h3><p>Автоматически создает записи и помогает распределять нагрузку.</p></article>
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Отвечать автоматически</h3><p>Оперативно отвечает на вопросы и помогает клиенту.</p></article>
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Принимать оплату</h3><p>Подключаем платежи и подтверждение оплаты без лишних шагов.</p></article>
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Напоминать о записи</h3><p>Уведомления снижают количество пропусков.</p></article>
-            <article class="feature-card glass reveal"><div class="feature-icon">✦</div><h3>Собирать отзывы</h3><p>После обслуживания бот помогает быстро собрать обратную связь.</p></article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 7h14M5 12h9M5 17h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Принимать заявки</h3>
+              <p>Бот собирает обращения в удобном формате и сразу передает их в работу.</p>
+            </article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 8h10M7 12h10M7 16h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Записывать клиентов</h3>
+              <p>Автоматически создает записи и помогает распределять нагрузку.</p>
+            </article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M8 10l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Отвечать автоматически</h3>
+              <p>Оперативно отвечает на вопросы и помогает клиенту без простоев.</p>
+            </article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3l2.6 5.3L20 9.1l-4.4 4.3 1 5.8-4.6-2.5-4.6 2.5 1-5.8L4 9.1l5.4-.8L12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Принимать оплату</h3>
+              <p>Подключаем платежи и подтверждение оплаты без лишних шагов.</p>
+            </article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="4" y="6" width="16" height="12" rx="3" stroke="currentColor" stroke-width="1.8" />
+                  <path d="M8 10h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Напоминать о записи</h3>
+              <p>Уведомления и напоминания снижают количество пропусков.</p>
+            </article>
+            <article class="feature-card glass reveal">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 18V9m6 9V5m6 13v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Собирать отзывы</h3>
+              <p>После обслуживания бот быстро помогает собрать обратную связь.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -114,13 +205,13 @@
             <h2>Путь от идеи до готового решения</h2>
           </div>
           <div class="timeline glass reveal">
-            <div class="timeline-item"><span>1</span><div><h3>Бесплатный разбор бизнеса</h3><p>Анализируем процессы, боли и точки роста.</p></div></div>
+            <div class="timeline-item"><span>1</span><div><h3>Бесплатный разбор бизнеса</h3><p>Мы изучаем процессы, боли и точки роста.</p></div></div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-item"><span>2</span><div><h3>Проектируем решение</h3><p>Выбираем сценарии и логику взаимодействия.</p></div></div>
+            <div class="timeline-item"><span>2</span><div><h3>Проектируем решение</h3><p>Подбираем сценарии, логику и путь клиента.</p></div></div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-item"><span>3</span><div><h3>Разрабатываем Telegram-бота</h3><p>Создаем удобный интерфейс и автоматизацию.</p></div></div>
+            <div class="timeline-item"><span>3</span><div><h3>Разрабатываем Telegram-бота</h3><p>Создаем аккуратный интерфейс и надежную автоматизацию.</p></div></div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-item"><span>4</span><div><h3>Запускаем</h3><p>Проводим тесты и включаем бота в работу.</p></div></div>
+            <div class="timeline-item"><span>4</span><div><h3>Запускаем</h3><p>Проводим тесты и подключаем бота к процессам.</p></div></div>
             <div class="timeline-arrow">↓</div>
             <div class="timeline-item"><span>5</span><div><h3>Поддерживаем и развиваем</h3><p>Адаптируем сценарии под новые задачи бизнеса.</p></div></div>
           </div>
@@ -146,6 +237,19 @@
         </div>
       </section>
 
+      <section class="section highlight-band">
+        <div class="container">
+          <div class="highlight-card glass reveal">
+            <div>
+              <p class="eyebrow">Самый важный шаг</p>
+              <h2>Получите бесплатный разбор бизнеса</h2>
+              <p>Во время разбора покажем, какие процессы можно автоматизировать, где вы теряете клиентов и как будет выглядеть ваш Telegram-бот.</p>
+            </div>
+            <a class="btn btn-primary btn-large" href="#contact">Получить бесплатный разбор</a>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="faq">
         <div class="container">
           <div class="section-heading reveal">
@@ -159,7 +263,7 @@
             </article>
             <article class="faq-item glass reveal">
               <button class="faq-question" type="button"><span>Сколько времени занимает?</span><span class="faq-icon">+</span></button>
-              <div class="faq-answer"><p>Обычно от 3 до 14 дней в зависимости от проекта.</p></div>
+              <div class="faq-answer"><p>Обычно от 3 до 14 дней, если проект не требует сложных интеграций.</p></div>
             </article>
             <article class="faq-item glass reveal">
               <button class="faq-question" type="button"><span>Можно ли подключить оплату?</span><span class="faq-icon">+</span></button>
@@ -167,7 +271,7 @@
             </article>
             <article class="faq-item glass reveal">
               <button class="faq-question" type="button"><span>Можно ли доработать существующего бота?</span><span class="faq-icon">+</span></button>
-              <div class="faq-answer"><p>Да, адаптируем и расширяем уже существующие решения.</p></div>
+              <div class="faq-answer"><p>Да, адаптируем и расширяем уже существующие решения под новые задачи.</p></div>
             </article>
           </div>
         </div>
